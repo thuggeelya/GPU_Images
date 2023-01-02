@@ -15,9 +15,9 @@ import static java.lang.System.currentTimeMillis;
 public class Application {
 
     public static void main(String[] args) throws IOException {
-        for (int n = 0, argsLength = args.length; n < argsLength; n++) {
-            System.out.print(n + ") ");
-            File file = new File(args[n]);
+        for (int n = 0; n < 3; n++) {
+            System.out.print(n + 1 + ") ");
+            File file = new File("src/main/resources/" + n + ".jpg");
             BufferedImage img = ImageIO.read(file);
             int xWidth = img.getWidth();
             int yHeight = img.getHeight();
